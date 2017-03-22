@@ -1,3 +1,13 @@
+
+
 img {
   width: 100%;
+}
+
+#receiptPage > p {
+padding-left: 10%;
+}
+
+h1, h2, h3 {
+  text-align: center;
 }

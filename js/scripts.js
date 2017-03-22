@@ -14,19 +14,20 @@ $(document).ready(function() {
     var zipcode = $("#zipcode").val();
     var paymentType = $("#paymentType").val();
 
+    $("#homePage").slideUp();
     $("#receiptPage").show();
-    $("#homePage").hide();
 
-    $("#colorRec").text(color);
-    $("#customColorRec").text(customColor);
-    $("#nameRec").text(name);
-    $("#phoneRec").text(phone);
-    $("#streetAddressRec").text(streetAddress);
-    $("#cityRec").text(city);
-    $("#stateRec").text(state);
-    $("#zipcodeRec").text(zipcode);
-    $("#paymentTypeRec").text(paymentType);
+    $("#colorRec").text("Ducati Monster color: " + color);
+    $("#customColorRec").text("Custom Ducati Monster color: " + customColor);
+    $("#nameRec").text("Name: " + name);
+    $("#phoneRec").text("Phone number: " + phone);
+    $("#streetAddressRec").text("Street Address: " + streetAddress);
+    $("#cityRec").text("City: " + city);
+    $("#stateRec").text("State: " + state);
+    $("#zipcodeRec").text("Zipcode: " + zipcode);
+    $("#paymentTypeRec").text("Method of payment: "  + paymentType);
 
+    $("#thanks").text("Thank you for your order, " + name + "!");
   });
 
 });
