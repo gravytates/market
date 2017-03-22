@@ -2,6 +2,14 @@ $(document).ready(function() {
 
   $("#receiptPage").hide();
 
+  $("#customColorDiv").hide();
+
+  $("#color").change(function() {
+    if ($("#color").val() === "Custom color picker") {
+      $("#customColorDiv").show();
+    };
+  });
+
   $("#submit").click(function() {
 
     var color = $("#color").val();
