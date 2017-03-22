@@ -12,8 +12,9 @@
     <script src="js/scripts.js"></script>
     <title>Marketplace</title>
   </head>
+
   <body>
-    <div class="container">
+    <div class="container" id="homePage">
       <h1>Rowdy's Place</h1>
       <p>
         Welcome to Rowdy's place. Choose your pick of the litter and we'll send it straight to your door! Neat huh?
@@ -134,13 +135,25 @@
               <option>Favors</option>
             </select>
           </div>
-
-
-          <a href="receipt.html" class="btn btn-info" type="submit" role="button">Submit</a>
+          <a class="btn btn-info" type="submit" role="button" id="submit">Submit</a>
         </form>
       </div>
 
-
     </div>
+
+    <div class="container" id="receiptPage">
+      <h1>Rowdy's Place</h1>
+      <h2>Receipt</h2>
+      <p id="colorRec"></p>
+      <p id="customColorRec"></p>
+      <p id="nameRec"></p>
+      <p id="phoneRec"></p>
+      <p id="streetAddressRec"></p>
+      <p id="cityRec"></p>
+      <p id="stateRec"></p>
+      <p id="zipcodeRec"></p>
+      <p id="paymentTypeRec"></p>
+    </div>
+
   </body>
 </html>
