@@ -7,6 +7,8 @@ $(document).ready(function() {
   $("#color").change(function() {
     if ($("#color").val() === "Custom color picker") {
       $("#customColorDiv").show();
+    } else {
+      $("#customColorDiv").hide();
     };
   });
 
@@ -22,8 +24,20 @@ $(document).ready(function() {
     var zipcode = $("#zipcode").val();
     var paymentType = $("#paymentType").val();
 
-    $("#homePage").slideUp();
-    $("#receiptPage").show();
+    var useralert = function(htmlId, defaultSelection, stopsign) {
+      if ($(htmlId).val() === defaultSelection){
+        alert(stopsign);
+        $("#recieptPage").hide();
+        $("#homePage").show();
+      } else {
+        $("#homePage").slideUp();
+        $("#receiptPage").show();
+      };
+    };
+
+    useralert("#paymentType", "Choose your payment option...", "Please input payment");
+    useralert("#color", "Choose your color...", "Please choose a color");
+    useralert("#state", "Choose your state...", "Please choose a state");
 
     $("#colorRec").text("Ducati Monster color: " + color);
     $("#customColorRec").text("Custom Ducati Monster color: " + customColor);
